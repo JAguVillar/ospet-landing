@@ -1,0 +1,45 @@
+---
+import Logo from "@/components/Logo.astro";
+---
+
+<div
+  class="header-wrapper relative w-full bg-white/75 flex justify-between items-center z-10"
+>
+  <div class="ospet-logo-container">
+    <Logo />
+  </div>
+  <div class="hidden md:block">
+    <div class="flex items-baseline ml-10 space-x-4">
+      <a class="px-3 py-2 rounded-md text-md font-semibold" href="/#">
+        Planes</a
+      >
+      <a class="px-3 py-2 rounded-md text-md font-semibold" href="/#">
+        Prestadores</a
+      >
+      <a class="px-3 py-2 rounded-md text-md font-semibold" href="/#">
+        Contacto</a
+      >
+      <a class="px-3 py-2 rounded-md text-md font-semibold" href="/#">
+        Autogestión</a
+      >
+      <button
+        type="button"
+        class="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-md font-bold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+      >
+        ¡Pedir un presupuesto!
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .header-wrapper {
+    padding: 2vw 4vw;
+  }
+  .ospet-logo-container img {
+    max-width: 100%;
+    max-height: 50px;
+  }
+  .links-container img {
+  }
+</style>
