@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "ospet-primary": "#5c6ac4",
-        "ospet-secondary": "#5c6ac4",
+        "ospet-primary": "#ff6e6c",
+        "ospet-secondary": "#67568c",
       },
     },
   },
