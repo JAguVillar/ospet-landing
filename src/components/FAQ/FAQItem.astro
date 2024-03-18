@@ -1,0 +1,21 @@
+---
+interface Props {
+  titulo: string;
+  body: string;
+}
+
+const { titulo, body } = Astro.props;
+---
+
+<div class="py-2">
+  <details class="cursor-pointer">
+    <summary class="text-sub text-xl font-bold p-4 bg-ospet-main"
+      >{titulo}</summary
+    >
+    <p
+      class="text-sub text-lg font-medium p-4 bg-ospet-primary border border-ospet-main border-x-4 border-b-4"
+    >
+      {body}
+    </p>
+  </details>
+</div>
