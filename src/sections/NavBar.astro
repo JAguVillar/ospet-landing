@@ -2,18 +2,32 @@
 import Logo from "@/components/Logo.astro";
 ---
 
+<script>
+  const button = document.getElementById("myButton");
+  button.addEventListener("click", handleButtonClick);
+
+  function handleButtonClick() {
+    console.log("click");
+  }
+</script>
+
 <div
   class="header-wrapper relative w-full bg-ospet-primary flex justify-between items-center z-10"
 >
-  <div class="ospet-logo-container">
-    <Logo />
+  <div class="flex items-center gap-8">
+    <i id="myButton" class="fa-solid fa-bars block md:hidden text-4xl"></i>
+    <div class="ospet-logo-container">
+      <Logo />
+    </div>
   </div>
-  <div class="hidden md:block">
+  <div>
     <div class="flex items-baseline ml-10 space-x-4 text-sub font-bold text-xl">
-      <a class="px-3 py-2 rounded-md" href="/planes/"> Planes</a>
-      <a class="px-3 py-2 rounded-md" href="/#"> Prestadores</a>
-      <a class="px-3 py-2 rounded-md" href="/#"> Contacto</a>
-      <a class="px-3 py-2 rounded-md" href="/#"> Autogestión</a>
+      <a class="px-3 py-2 rounded-md hidden md:block" href="/planes/">
+        Planes</a
+      >
+      <a class="px-3 py-2 rounded-md hidden md:block" href="/#"> Prestadores</a>
+      <a class="px-3 py-2 rounded-md hidden md:block" href="/#"> Contacto</a>
+      <a class="px-3 py-2 rounded-md hidden md:block" href="/#"> Autogestión</a>
       <button
         type="button"
         class="py-4 px-6 bg-ospet-button hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-espet-button w-full transition ease-in duration-200 text-center text-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
