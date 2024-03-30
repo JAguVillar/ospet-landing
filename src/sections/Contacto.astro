@@ -2,8 +2,43 @@
 
 ---
 
-<section class="limit">
-  <h3 class="text-ospet-text text-3xl font-bold text-center">
-    Envianos tu consulta
-  </h3>
+<section style="height: 100vh;
+overflow: hidden;
+position: relative;">
+  <div class="container">
+    <div class="pattern"></div>
+    <div class="pattern-overlay"></div>
+  </div>
 </section>
+<style>
+  @keyframes pan {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  .container {
+    background: radial-gradient(
+      rgb(var(--light-gold-rgb)),
+      rgb(var(--dark-gold-rgb))
+    );
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .pattern {
+    background-image: url("alimentos_grid_2.png");
+    background-size: 10%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    opacity: 0.1;
+    animation: pan 90s linear infinite;
+    will-change: background-position;
+  }
+</style>
