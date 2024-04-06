@@ -7,15 +7,34 @@ interface Props {
 const { titulo, body } = Astro.props;
 ---
 
+<script>
+  const details = document.querySelectorAll("details");
+  details.forEach((detail) => {
+    detail.addEventListener("toggle", (event) => {
+      const summary = event.target.querySelector("summary");
+      if (event.target.open) {
+        console.log(`The summary "${summary.textContent}" is active.`);
+      }
+    });
+  });
+</script>
+
 <div class="py-2">
   <details class="cursor-pointer">
-    <summary class="text-sub text-xl font-bold p-4 bg-ospet-main"
+    <summary
+      class="text-sub text-xl font-bold p-4 bg-gray-100 hover:bg-ospet-background ease-in duration-100"
       >{titulo}</summary
     >
     <p
-      class="text-sub text-lg font-medium p-4 bg-ospet-primary border border-ospet-main border-x-4 border-b-4"
+      class="text-sub text-lg font-medium p-4 bg-ospet-background border border-ospet-background border-x-4 border-b-4"
     >
       {body}
     </p>
   </details>
 </div>
+
+<style>
+  details[open] > summary {
+    background-color: #fef6e4;
+  }
+</style>

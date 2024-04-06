@@ -2,70 +2,59 @@
 
 ---
 
+<!-- TODO resumir items -->
 <section>
-  <img
-    src="hero-image-2.jpg"
-    alt="OSPET"
-    srcset=""
-    class="aspect-video relative top-0 left-0"
-  />
-  <div
-    class=""
-    style="position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  transform: translate(0%,50%);
-  padding-left: 4vw;
-  "
-  >
-    <div style="max-width: 50vw;">
-      <h1 class="text-white
-    text-6xl
-    font-black my-8">
-        Comprometidos con el bienestar animal
-      </h1>
+  <div class="w-full relative">
+    <picture>
+      <source media="(max-width: 768px)" srcset="hero-image-2_mobile.jpeg" />
+      <source media="(min-width: 769px)" srcset="hero-image-2-copia.jpg" />
+      <img
+        src="hero-image-2-copia.jpg"
+        alt="OSPET"
+        srcset=""
+        class="w-full object-cover"
+      />
+    </picture>
+    <div class="absolute inset-0 flex items-center justify-dtart wrapper">
+      <div class="text-left text-white">
+        <h1 class="text-4xl font-bold mb-4">
+          Comprometidos con el bienestar animal
+        </h1>
+        <ul class="font-extrabold text-sub text-3xl">
+          <li class="my-4">
+            <i
+              class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
+              style="--fa-rotate-angle: 30deg;"></i>
+            <span class="text-white"
+              >Atención médica destacada por los mejores veterinarios.</span
+            >
+          </li>
+          <li class="my-4">
+            <i
+              class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
+              style="--fa-rotate-angle: -10deg;"></i>
+            <span class="text-white"
+              >Planes personalizados adaptados a las necesidades de cada dueñoy
+              sus mascotas.</span
+            >
+          </li>
+          <li class="my-4">
+            <i
+              class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
+              style="--fa-rotate-angle: -45deg;"></i>
+            <span class="text-white"
+              >Cobertura completa para cirugías, internaciones y consultas
+              especializadas.</span
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul class="font-extrabold text-sub text-3xl">
-      <li class="my-4">
-        <div>
-          <i
-            class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
-            style="--fa-rotate-angle: 30deg;"></i>
-          <span class="text-white"
-            >Atención médica destacada por los mejores veterinarios.</span
-          >
-        </div>
-      </li>
-      <li class="my-4">
-        <div>
-          <i
-            class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
-            style="--fa-rotate-angle: -10deg;"></i>
-          <span class="text-white"
-            >Planes personalizados adaptados a las necesidades de cada dueñoy
-            sus mascotas.</span
-          >
-        </div>
-      </li>
-      <li class="my-4">
-        <div>
-          <i
-            class="fa-solid fa-paw text-ospet-accent fa-rotate-by"
-            style="--fa-rotate-angle: -45deg;"></i>
-          <span class="text-white"
-            >Cobertura completa para cirugías, internaciones y consultas
-            especializadas.</span
-          >
-        </div>
-      </li>
-    </ul>
-
-    <!-- <button
-      type="button"
-      class="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-md font-bold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-    >
-      ¡Pedir un presupuesto!
-    </button> -->
   </div>
 </section>
+
+<style>
+  .wrapper {
+    margin-left: 4vw;
+  }
+</style>
